@@ -33,6 +33,7 @@ class User < ApplicationRecord
     param.strip!
     param.downcase!
     (first_name_matches(param) + last_name_matches(param) + email_matches(param)).uniq
+    
   end
   
   def except_current_user(users)
